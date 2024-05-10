@@ -1,5 +1,6 @@
 import { render } from "./modules/render";
 import { addUsers } from "./modules/addUsers";
+import { removeUsers } from "./modules/removeUsers";
 import { UserService } from "./modules/userServise";
 
 
@@ -9,3 +10,4 @@ userService.getUsers().then(data => {
 })
 
 addUsers();
+removeUsers();

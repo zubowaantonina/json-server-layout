@@ -1,5 +1,6 @@
 export const render = (users) => {
   const tBody=document.getElementById('table-body');
+  tBody.innerHTML=''
   // console.log(tBody);
   users.forEach(user =>{
   // console.log(user);

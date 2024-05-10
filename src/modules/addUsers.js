@@ -9,6 +9,7 @@ export const addUsers = () => {
         e.preventDefault();
 
         const user = {
+           
             name: nameImput.value,
             email: emailImput.value,
             children: childrenImput.checked,
@@ -20,6 +21,11 @@ export const addUsers = () => {
         //     })
         // })
         console.log(user);
+userService.addUser(user).then(() => {
+    userService.getUsers().then(users => {
+        render(users)
+    })
 
+})
     });
 };
