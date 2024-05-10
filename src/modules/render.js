@@ -9,7 +9,7 @@ export const render = (users) => {
  <tr data-key="${user.id}">
 <th scope="row">${user.id}</th>
 <td>${user.name}</td>
-<td>${user.email}/td>
+<td>${user.email}</td>
 <td>${user.children?"Есть":"Нет"}</td>
 <td>
     <div class="form-check form-switch">

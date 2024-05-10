@@ -4,7 +4,7 @@ export const filterUsers=() => {
   const btnIsPermissions=document.getElementById('btn-isPermissions')
   const btnIsAll=document.getElementById('btn-isAll')
   btnIsChildren.addEventListener('click', () => {
-    userService.filterUsers("children").then((users) => {
+    userService.filterUsers('children').then((users) => {
         console.log(users);
         // render(users);
         // form.reset();
