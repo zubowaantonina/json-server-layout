@@ -7,18 +7,20 @@ export const addUsers = () => {
   const childrenImput = document.querySelector("#form-children");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+if(!form.dataset.metod){
     const user = {
-      name: nameImput.value,
-      email: emailImput.value,
-      children: childrenImput.checked,
-      permissions: false,
-    };
-    // console.log(user);
-    userService.addUser(user).then(() => {
-      userService.getUsers().then((users) => {
-        render(users);
+        name: nameImput.value,
+        email: emailImput.value,
+        children: childrenImput.checked,
+        permissions: false,
+      };
+      userService.addUser(user).then(() => {
+        userService.getUsers().then((users) => {
+          render(users);
+          form.reset();
+        });
       });
-    });
+}
+   
   });
 };
