@@ -1,3 +1,4 @@
+import { render } from "./render"
 export const filterUsers=() => {
    
   const btnIsChildren=document.getElementById('btn-isChildren')
@@ -5,16 +6,17 @@ export const filterUsers=() => {
   const btnIsAll=document.getElementById('btn-isAll')
   btnIsChildren.addEventListener('click', () => {
     userService.filterUsers('children').then((users) => {
-        console.log(users);
-        // render(users);
-        // form.reset();
+        render(users);
       });
-    console.log(btnIsChildren);
   })
   btnIsPermissions.addEventListener('click', () => {
-    console.log(btnIsPermissions);
+    userService.filterUsers('permissions').then((users) => {
+      render(users);
+    });
   })
   btnIsAll.addEventListener('click', () => {
-    console.log(btnIsAll);
+    userService.getUsers().then((users) => {
+      render(users);
+    });
   })
 }

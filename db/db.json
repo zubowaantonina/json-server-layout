@@ -3,7 +3,7 @@
     {
       "name": "Mark",
       "email": "otto@gmail.com",
-      "children": true,
+      "children": false,
       "permissions": false,
       "id": "0"
     },
@@ -11,7 +11,7 @@
       "name": "Jacob",
       "email": "thornton@gmail.com",
       "children": true,
-      "permissions": false,
+      "permissions": true,
       "id": "1"
     },
     {
