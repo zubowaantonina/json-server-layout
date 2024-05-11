@@ -14,12 +14,12 @@ if(!form.dataset.metod){
         children: childrenImput.checked,
         permissions: false,
       };
-      userService.addUser(user).then(() => {
-        userService.getUsers().then((users) => {
-          render(users);
-          form.reset();
-        });
-      });
+      userService.sendData('POST', user, 'http://localhost:4545/users').then(() => {
+                userService.getData().then(users => {
+                    render(users);
+                    form.reset();
+                });
+            });
 }
    
   });

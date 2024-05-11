@@ -5,11 +5,11 @@ export const removeUsers = () => {
     if (event.target.closest(".btn-remove")) {
       const tr = event.target.closest("tr");
       const id = tr.dataset.key;
-      userService.removeUser(id).then((res) => {
-        userService.getUsers().then((users) => {
-          render(users);
-        });
-      });
+      userService.sendData('DELETE', undefined, `http://localhost:4545/users/${id}`).then(res => {
+                userService.getData().then(users => {
+                    render(users);
+                });
+            });
     }
   });
 };
