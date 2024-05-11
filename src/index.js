@@ -5,6 +5,8 @@ import { UserService } from "./modules/userServise";
 import { changePermissions } from "./modules/changePermissions";
 import { editUsers } from "./modules/editUsers";
 import { filterUsers } from "./modules/filterUsers";
+import { sortUsers } from "./modules/sortUsers";
+
 window.userService = new UserService();
 userService.getUsers().then((data) => {
   render(data);
@@ -15,3 +17,4 @@ removeUsers();
 changePermissions();
 editUsers();
 filterUsers();
+sortUsers();

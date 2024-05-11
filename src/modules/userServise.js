@@ -42,4 +42,9 @@ export class UserService {
         return fetch(`http://localhost:4545/users?${filterOption}=1`)
         .then(res => res.json());
     } 
+    getSortUsers(soptOption){
+      // return fetch(`http://localhost:4545/users?_sort=${soptOption.name}&_order=${soptOption.value}`)
+      return fetch(`http://localhost:4545/users?_sort=${soptOption}`)
+      .then(res => res.json());
+    }
 }

@@ -4,7 +4,7 @@
       "name": "Mark",
       "email": "otto@gmail.com",
       "children": false,
-      "permissions": false,
+      "permissions": true,
       "id": "0"
     },
     {
@@ -20,6 +20,13 @@
       "children": false,
       "permissions": false,
       "id": "f966"
+    },
+    {
+      "id": "1a95",
+      "name": "Mark223",
+      "email": "otto@gmail.com",
+      "children": true,
+      "permissions": false
     }
   ]
 }
