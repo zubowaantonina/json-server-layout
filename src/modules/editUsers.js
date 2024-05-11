@@ -16,7 +16,7 @@ export const editUsers = () => {
           (emailImput.value = user.email),
           (childrenImput.checked = user.children);
           form.dataset.metod=id
-        console.log(user);
+        
       });
     }
   });

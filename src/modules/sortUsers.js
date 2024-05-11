@@ -4,17 +4,13 @@ export const sortUsers = () => {
     let isSort = false;
     headerSortIsChildren.style.cursor = "pointer";
     headerSortIsChildren.addEventListener("click", () => {
-        userService.getSortUsers('children').then((users) => {
-            render(users);
-            console.log(users);
-          });
-        // userService.getSortUsers({
-        //         name: "children",
-        //         value: isSort ? "asc" : "desc",
-        //     })
-        //     .then((users) => {
-        //         console.log(users);
-        //     });
+        userService.getSortUsers({
+                name: "children",
+                value: isSort ? "asc" : "desc",
+            })
+            .then((users) => {
+                render(users);
+            });
             isSort = !isSort;
         
     });

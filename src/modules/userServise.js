@@ -39,12 +39,15 @@ export class UserService {
       }).then((res) => res.json());
   }
    filterUsers(filterOption) {
-        return fetch(`http://localhost:4545/users?${filterOption}=1`)
+        return fetch(`http://localhost:4545/users?${filterOption}=true`)
         .then(res => res.json());
     } 
     getSortUsers(soptOption){
-      // return fetch(`http://localhost:4545/users?_sort=${soptOption.name}&_order=${soptOption.value}`)
-      return fetch(`http://localhost:4545/users?_sort=${soptOption}`)
+      return fetch(`http://localhost:4545/users?_sort=${soptOption.name}&_order=${soptOption.value}`)
+      .then(res => res.json());
+    }
+    getSearchUsers(str){
+      return fetch(`http://localhost:4545/users?name_like=${str}`)
       .then(res => res.json());
     }
 }
